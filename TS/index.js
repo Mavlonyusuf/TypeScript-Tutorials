@@ -117,7 +117,7 @@ newStr = ["bir", "ikki", "uch"];
 // Bir nechta typelarni qabul qiluvchi array
 let newArr1;
 // TUPLES  ======= KARTEJLAR
-let data; // ushbu korinishdagi arrayning 0 siga number, 1-siga string kiritish mumkin
+let data ; // ushbu korinishdagi arrayning 0 siga number, 1-siga string kiritish mumkin
 data = [12, "Mavlon"]; // it is correct
 // data = [12, 13]   it's error
 // data = ["o'n", "ikki"]   it's error
@@ -131,4 +131,38 @@ var Names;
 })(Names || (Names = {}));
 console.log(Names.A);
 console.log(0 /* Letters.A */);
+function makeDate(mOrTimestamp, d, y) {
+    if (d !== undefined && y !== undefined) {
+        return new Date(y, mOrTimestamp, d);
+    }
+    else {
+        return new Date(mOrTimestamp);
+    }
+}
+const d1 = makeDate(12345678);
+const d2 = makeDate(5, 5, 5);
+console.log(d1);
+console.log(d2);
+function len(x) {
+    return x.length;
+}
+console.log(len("")); // OK
+console.log(len([0])); // OK
+console.log();
 //# sourceMappingURL=index.js.map
+// classes in JS
+class User {
+
+    constructor(name) {
+      this.name = name;
+    }
+  
+    sayHi() {
+      confirm(`Hello ${this.name}`);
+    }
+  
+  }
+  
+  // Usage:
+  let user12 = new User("John");
+  user12.sayHi();
