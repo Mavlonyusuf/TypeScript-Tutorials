@@ -615,10 +615,147 @@
 
 // ===================== NonNullable ========================== 
 
-// Faqatgina qiymat mavjud bolgan turdagi datalarni qaytaradi
-type Result = string | boolean | null | undefined
-type result1 = NonNullable<Result>  //type result1 = string | boolean
+// // Faqatgina qiymat mavjud bolgan turdagi datalarni qaytaradi
+// type Result = string | boolean | null | undefined
+// type result1 = NonNullable<Result>  //type result1 = string | boolean
 
-type MyNonNullable <T> = T extends null | undefined ? never : T
-type result2 = MyNonNullable<Result>  //type result2 = string | boolean
+// type MyNonNullable <T> = T extends null | undefined ? never : T
+// type result2 = MyNonNullable<Result>  //type result2 = string | boolean
  
+
+// ===================== Readonly && ReadonlyArray  ========================== 
+
+// type User = {
+//   name : string
+//   password : string
+// }
+// const user1 : Readonly <User> = {
+//   name : 'Mavlon',
+//   password : '12user12'
+// }
+// // user1.name = 'Asliddin' Error
+// const user2 = {
+//   name : 'Mavlon', 
+//   password : 'user12345'
+// } as const
+// // user2.name = 'Asliddin'  Error
+
+// const user3 = <const> {
+//   name : 'mavlon', 
+//   password : 'user12345'
+// }
+// // user3.name = 'Asliddin' Error
+
+// const Arrays = [
+//   {title : 'Olma', weight : '2kg'},
+//   {title : 'Nok', weight : '3kg'},
+//   {title : 'Olcha', weight : '10kg'},
+// ] as const
+
+// // Arrays.push({title : 'behi', weight : '1kg'})  Error
+
+// const Arrays1 = <const>[
+//   {title : 'Olma', weight : '2kg'},
+//   {title : 'Nok', weight : '3kg'},
+//   {title : 'Olcha', weight : '10kg'},
+// ] 
+// // Arrays.push({title : 'behi', weight : '1kg'})  Error
+
+// ===================== Pick ========================== 
+
+// type Person = {
+//   name : string
+//   age : number
+// }
+// type human = Pick <Person, 'name'>
+
+// // type human = {
+// //   name: string;
+// // }
+
+// type Mypick <T, K extends keyof T> = {[P in K] : T[P]}
+// type human1 = Mypick<Person, 'age'>
+
+// // type human1 = {
+// //   age: number;
+// // }
+// interface Todo {
+//   title: string;
+//   description: string;
+//   completed: boolean;
+// }
+//  type tasks = Pick <Todo, 'title'>
+
+//  const todos : tasks = {
+//   title : 'Reading books'
+//  }
+
+// ===================== Extract ========================== 
+
+// type A = number | string | boolean
+// type B = string | undefined | null
+// type C = Extract<A,B>         //type C = string
+
+// type MyExtract <T, U> = T extends U ? T : never
+// type G = MyExtract<string | number, number | boolean | undefined>   //type G = number
+
+// ===================== Exclude ========================== 
+
+// type A = number | string | boolean
+// type B = string | undefined | null
+// type C = Exclude<A,B>           //type C = number | boolean
+
+// type MyExclude <T, U> = T extends U ? never : T
+
+// type G = MyExclude<A,B>            //type G = number | boolean
+
+
+// ===================== Omit ========================== 
+
+
+// interface Books {
+//   title : string
+//   pages : number
+//   auth : string
+// }
+
+// type book = Omit <Books, 'auth'>      
+
+// // type book = {
+// //   title: string;
+// //   pages: number;
+// // }
+
+// const newBook : book = {
+//   title : "Rework", 
+//   pages : 450
+// }
+
+// 
+// class C {
+//   _length = 0;
+//   get length() {
+//     return this._length;
+//   }
+//   set length(value) {
+//     this._length = value;
+//   }
+// }
+
+// const newObj = new C ()
+// newObj.length = 15
+// console.log(newObj);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
