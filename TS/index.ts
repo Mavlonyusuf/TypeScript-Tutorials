@@ -5,11 +5,10 @@
 // tsc faylni avtomatik ishga tushurish "watch" : true (in tsconfig.json)
 // console.log("Hello TypeScript");
 
-
 // Data Types
 
 // TypeScriptda bir data turdagi ma'lumotni ikkinchi bir data turdagi ma'lumotga o'zgaritib bo'lmaydi
-// // For instance : 
+// // For instance :
 // let a = 21
 // // a = "Mavlon" //Error beradi
 // let b: number = 25  //O'zgaruvchini Ushbu ko'rinishda yozish tavsiya etiladi
@@ -20,13 +19,13 @@
 // let profession : undefined = undefined // undefined da ham faqat undefined qiymat berish mumkin
 
 // let user : object = {}  // | let user = {}
-// user = {ism : "mavlon"} 
+// user = {ism : "mavlon"}
 // console.log(user.ism);  // objectga nima kiritilsa uni ham avvaldan data turini ko'rsatib o'tilmasa Error beradi
-// For Example : 
+// For Example :
 // let user1 : {ism : string} = {ism : "Mavlon"}
 // console.log(user1.ism);
 
-// let anything : any  /* any data turiga istalgan turdagi data turini biriktirsa bo'ladi. 
+// let anything : any  /* any data turiga istalgan turdagi data turini biriktirsa bo'ladi.
 // Ammo bunda typscriptdan ko'zlangan maqsad bajarilmaydi. TypeScriptning asosiy maqsadlaridan biri data turlarini ajaratib ishlatish*/
 // anything = 12
 // anything = "Mavlon"
@@ -39,7 +38,6 @@
 // const names = ["mavlon", "yusuf", "huzayfa"]
 // console.log(typeof names);
 
-
 // Functions
 
 // function declaration in JS
@@ -51,9 +49,9 @@
 // }
 // console.log(pow(10, 2));
 
-// function logId(id : number | string) {    //this is void function. it doesn't need to write, but may write 
+// function logId(id : number | string) {    //this is void function. it doesn't need to write, but may write
 //     console.log(id);                      // for example : function logId(id : number | string) :void => console.log(id)
-    
+
 // }
 // logId(15)
 // logId('35')
@@ -68,7 +66,7 @@
 //         console.log("Hello, " + arr.join(" and "));
 //     }else {
 //         console.log("Welcome lone traveler " + arr);
-        
+
 //     }
 // }
 // guests("Mavlon")
@@ -79,7 +77,7 @@
 
 // users = function(name : string, age : number) : string {
 //      return (`${name} siz ${age} yoshdasiz`);
-    
+
 // }
 // console.log(users("Mavlon", 22));
 
@@ -97,15 +95,14 @@
 // console.log(OverLoadFunc(8, 8784848));
 // console.log(OverLoadFunc('Javob', 45));
 
-
 // function getFirstThree(x: number[] | string) {
 //     return x.slice(0, 3);
 //   }
 
 // console.log(getFirstThree("Assalamu alaykum"));
 
-// Bir data turidan ikkinchi bir data turiga otish. bu imkoniyat faqatgina 2ta data turida mavjud. "any" va shuning muqobili "unknown" 
-// For instance : 
+// Bir data turidan ikkinchi bir data turiga otish. bu imkoniyat faqatgina 2ta data turida mavjud. "any" va shuning muqobili "unknown"
+// For instance :
 // let num : any = 10
 // let num1 :number = num    // Bu usul bilan ham boshqa data turiga otib bolsada , tavsiya qilinmaydi
 
@@ -121,15 +118,15 @@
 // str = "Mavlon"
 // str = ["mavlon" , "yusuf"]
 
-// function printId(x : string | number ) {   
-//     console.log(x.toUpperCase()); //ushbu uslub tavsiya qilinmaydi. Avval ozgaruvchining data turi aniqlanib, 
+// function printId(x : string | number ) {
+//     console.log(x.toUpperCase()); //ushbu uslub tavsiya qilinmaydi. Avval ozgaruvchining data turi aniqlanib,
 // }                 //  keyin methodlarni ishlarish kk
 // function printId (x : string | number) {
 //     if(typeof x === "string") {
 //         console.log(x.toUpperCase());
 //     }else {
 //         console.log(x);
-        
+
 //     }
 // }
 // printId("Mavlon")
@@ -137,7 +134,6 @@
 
 // LITERAL TYPES
 // bu typeda faqatgina oldindan kiritilgan qiymatlarni tanlash mumkin, Huddin optionga o'xshash
-
 
 // let size : "SM" | "MD" | "LG" | "XL"
 // size = "LG"
@@ -151,7 +147,7 @@
 // let news : size = "XL"
 // Arrays
 
-// let newArr = [];           // Ushbu ko'rinishdagi arrayga istalgan data type ni kiritish mumkin 
+// let newArr = [];           // Ushbu ko'rinishdagi arrayga istalgan data type ni kiritish mumkin
 // newArr = [1,7,8,"sajbsja", true]
 
 // let newStr : string[]  /* yoki let newStr : Array<string> */   // [] dan avval qaysi typelar yozilgan bolsa faqat osha turdagi typelarni qabul qiladi
@@ -174,7 +170,7 @@
 
 // enum Names  {
 // A,
-// B, 
+// B,
 // C,
 // }
 // console.log(Names.A);
@@ -186,8 +182,8 @@
 //     C = 2,
 //   }
 //   console.log(Enuma.A);
-  
-// const enam EnamName {  const enam larni oddiy enam dan asosiy farqi js faylda nima sodir bolayotganini  
+
+// const enam EnamName {  const enam larni oddiy enam dan asosiy farqi js faylda nima sodir bolayotganini
 // A,                       yozilmaydi. Faqat natija yoziladi
 // B,
 // C
@@ -214,13 +210,11 @@
 // console.log(d1);
 // console.log(d2);
 
-
 // function len(s: string): number;
 // function len(arr: any[]): number;
 // function len(x: any) {
 //   return x.length;
 // }
-
 
 // console.log(len(""))  ; // OK
 // console.log(len([0]));  // OK
@@ -253,7 +247,7 @@
 //         }
 //     }
 
-//     // 
+//     //
 //     static description ():string  {
 //         return `Ushbu klass foydalanuvchi haqida ma'lumot beradi...`
 //     }
@@ -287,14 +281,14 @@
 // console.log(Users.description());
 
 // // Bitta classda faqatgina bitta constructor ishlatish mumkin. Lekin cheksiz method ham staticlar ishlatsa bo'ladi
-// // Static --- bu classga tegishli bo'lgan ma'lumotlardir. 
+// // Static --- bu classga tegishli bo'lgan ma'lumotlardir.
 
 // Mavlon.name = "Asadbek"
 // console.log(Mavlon.name); // Asadbek
 // Asliddin.age = 25
 // console.log(Asliddin.age); // 25
 
-// // instanceof ====== obyektni qaysi klassdan olinganligini tekshiradi. For instance : 
+// // instanceof ====== obyektni qaysi klassdan olinganligini tekshiradi. For instance :
 // console.log(Mavlon instanceof Users);  //true mavjud bolsa true aks xolda false qaytaradi
 
 // Extends ============ me'ros olish
@@ -333,8 +327,8 @@
 // const Mavlon : Students = new Students("Mavlon", 22, "Front-End Developer", ["JavaScript", "VueJs", "VueX", "TypeScript"])
 // console.log(Mavlon.greeting());
 
-// ================ INTERFACES interface larni typelardan asosiysi farqi => iterface larni bitta nima bilan bir nechtasini e'lon qilsa 
-// bo'ladi. Typelarda esa aksincha. Typelarni birlashtirsa boladi. For instance : 
+// ================ INTERFACES interface larni typelardan asosiysi farqi => iterface larni bitta nom bilan bir nechtasini e'lon qilsa
+// bo'ladi. Typelarda esa aksincha. Typelarni birlashtirsa boladi. For instance :
 // bir nechta interface larni bir xil nom bilan atash
 // interface Human {
 //     _name : string
@@ -357,7 +351,7 @@
 //     _job : string | number
 // }
 
-// ===================== interface larni classlardan farqlari for intance : 
+// ===================== interface larni classlardan farqlari for intance :
 // classlarda bitta class faqatgina bitta classdan vorislik ola oladi. Interface larda esa cheksiz for instance :
 
 // class User {
@@ -397,7 +391,7 @@
 //     _job : string
 // }
 // interface UserGeneral extends UserA, UserB, UserC {
-//     seyHello () :string ; 
+//     seyHello () :string ;
 // }
 
 // class IUser implements UserA {
@@ -426,7 +420,7 @@
 //     _job : string
 
 //     constructor(name: string, age: number, job: string) {
-//         super(name, age) 
+//         super(name, age)
 //         this._job = job
 //     }
 //     greeting(): string {
@@ -447,7 +441,7 @@
 // class Dog {
 //     #barkAmount = 0;
 //     personality = "happy";
-   
+
 //     constructor() {}
 //   }
 
@@ -458,7 +452,7 @@
 //     export function log (text : string, color : string, fontSize? : string):void {
 //         if(fontSize) {
 //             console.log(`%c${text}`, `color : ${color}; font-size : ${fontSize}`);
-            
+
 //         }else {
 //             console.log(`%c${text}`, `color : ${color}`)
 //         }
@@ -468,7 +462,7 @@
 // namespace Animals {
 //     export abstract class Animal {
 //         name : string
-        
+
 //         constructor(name : string) {
 //             this.name = name
 //         }
@@ -479,11 +473,11 @@
 //         constructor(name : string, sound : string) {
 //             super(name)
 //             this.sound = sound
-            
+
 //         }
 //         say() : void {
 //             Utils.log(`${this.name} ${this.sound} degan ovoz chiqaradi`, 'red', '25px');
-            
+
 //         }
 //     }
 
@@ -503,49 +497,48 @@
 // const echo : <T>(x:T) => T = <T>(x:T) : T => {
 //     return x
 // }
-// const echo = <T> (x:T) => x 
+// const echo = <T> (x:T) => x
 // const echo1 = echo([54,87,2158,5])
 // console.log(echo1);
 
 // function identity<Type>(arg: Type): Type {
 //     return arg;
 //   }
-   
+
 //   let myIdentity: <Type>(arg: Type) => Type = identity;
 //   console.log(myIdentity(45));
-  // function identity<Type>(arg: Type): Type {
-  //   return arg;
-  // }
-   
-  // let myIdentity: <Input>(arg: Input) => Input = identity
-  // console.log(myIdentity("sjbsjdns"));
+// function identity<Type>(arg: Type): Type {
+//   return arg;
+// }
 
-  // class getData <Type> {
-  //   name : Type
-  //   password : Type
+// let myIdentity: <Input>(arg: Input) => Input = identity
+// console.log(myIdentity("sjbsjdns"));
 
-  //   addUser : (name : Type, password : Type) => Type
-  // }
+// class getData <Type> {
+//   name : Type
+//   password : Type
 
-  // let newUser = new getData <string>()
-  // newUser.name = "Mavlon"
-  // newUser.password = "123456user"
-  // newUser.addUser = function (x, y) {
-  //   return x + y
-  // }
+//   addUser : (name : Type, password : Type) => Type
+// }
+
+// let newUser = new getData <string>()
+// newUser.name = "Mavlon"
+// newUser.password = "123456user"
+// newUser.addUser = function (x, y) {
+//   return x + y
+// }
 
 //   function getProperty<Type, Key extends keyof Type>(obj: Type, key: Key) {
 //     return obj[key];
 //   }
-   
+
 //   let x = { a: 1, b: 2, c: 3, d: 4 };
-   
+
 //  console.log( getProperty(x, "a"));
- 
 
 // type Point = { x: number; y: number };
 // type P = keyof Point;
-// const Num : P = "x" 
+// const Num : P = "x"
 // console.log(Num);
 // let Arr1 = [1, true, "bir"]
 // type A<T> = T extends (infer U) [] ? U : never
@@ -554,7 +547,7 @@
 
 // ======================== Partial =========================
 
-// type MyPartial<T> = {[P in keyof T]? : T[P]}
+// type MyPartial<T> = {[P in keyof T]? : T[P]}  Required bolgan fieldni optionalga otkazadi
 
 // type Obj = {
 //   name: string
@@ -591,7 +584,6 @@
 // type MyRequired <T> = {[P in keyof T]-? : T[P]}
 // type User2 = MyRequired <User>
 
-
 // // type User2 = {
 // //   name: string;
 // //   age: number;
@@ -603,9 +595,9 @@
 //   age: number;
 //   breed: string;
 // }
- 
+
 // type CatName = "miffy" | "boris" | "mordred";
- 
+
 // const cats: Record<CatName, CatInfo> = {
 //   miffy: { age: 10, breed: "Persian" },
 //   boris: { age: 5, breed: "Maine Coon" },
@@ -613,7 +605,7 @@
 //   // mavlon : {age : 22, breed : "lorem ipsum"}  Error beradi. Faqatgina korsatilgan keylardan foydalanish mumkin
 // };
 
-// ===================== NonNullable ========================== 
+// ===================== NonNullable ==========================
 
 // // Faqatgina qiymat mavjud bolgan turdagi datalarni qaytaradi
 // type Result = string | boolean | null | undefined
@@ -621,9 +613,8 @@
 
 // type MyNonNullable <T> = T extends null | undefined ? never : T
 // type result2 = MyNonNullable<Result>  //type result2 = string | boolean
- 
 
-// ===================== Readonly && ReadonlyArray  ========================== 
+// ===================== Readonly && ReadonlyArray  ==========================
 
 // type User = {
 //   name : string
@@ -635,13 +626,13 @@
 // }
 // // user1.name = 'Asliddin' Error
 // const user2 = {
-//   name : 'Mavlon', 
+//   name : 'Mavlon',
 //   password : 'user12345'
 // } as const
 // // user2.name = 'Asliddin'  Error
 
 // const user3 = <const> {
-//   name : 'mavlon', 
+//   name : 'mavlon',
 //   password : 'user12345'
 // }
 // // user3.name = 'Asliddin' Error
@@ -658,10 +649,10 @@
 //   {title : 'Olma', weight : '2kg'},
 //   {title : 'Nok', weight : '3kg'},
 //   {title : 'Olcha', weight : '10kg'},
-// ] 
+// ]
 // // Arrays.push({title : 'behi', weight : '1kg'})  Error
 
-// ===================== Pick ========================== 
+// ===================== Pick ==========================
 
 // type Person = {
 //   name : string
@@ -690,7 +681,7 @@
 //   title : 'Reading books'
 //  }
 
-// ===================== Extract ========================== 
+// ===================== Extract ==========================
 
 // type A = number | string | boolean
 // type B = string | undefined | null
@@ -699,7 +690,7 @@
 // type MyExtract <T, U> = T extends U ? T : never
 // type G = MyExtract<string | number, number | boolean | undefined>   //type G = number
 
-// ===================== Exclude ========================== 
+// ===================== Exclude ==========================
 
 // type A = number | string | boolean
 // type B = string | undefined | null
@@ -709,9 +700,7 @@
 
 // type G = MyExclude<A,B>            //type G = number | boolean
 
-
-// ===================== Omit ========================== 
-
+// ===================== Omit ==========================
 
 // interface Books {
 //   title : string
@@ -719,7 +708,7 @@
 //   auth : string
 // }
 
-// type book = Omit <Books, 'auth'>      
+// type book = Omit <Books, 'auth'>
 
 // // type book = {
 // //   title: string;
@@ -727,11 +716,11 @@
 // // }
 
 // const newBook : book = {
-//   title : "Rework", 
+//   title : "Rework",
 //   pages : 450
 // }
 
-// 
+//
 // class C {
 //   _length = 0;
 //   get length() {
@@ -745,17 +734,3 @@
 // const newObj = new C ()
 // newObj.length = 15
 // console.log(newObj);
-
-
-
-
-
-
-
-
-
-
-
-
-
-

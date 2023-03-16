@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>TypeScript</title>
+  </head>
+  <body>
+    <section class="w-screen my-10">
+      <form id="form" class="flex w-3/4 mx-auto box-border">
+        <div class="w-2/5">
+          <label for="product-name" class="block mb-2 text-xl font-medium ml-1"
+            >Maxsulot Nomi</label
+          >
+          <input
+            type="text"
+            id="product-name"
+            class="bg-slate-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="maxsulot nomini kiriting..."
+          />
+        </div>
+        <div class="w-2/5 mx-4">
+          <label for="product-price" class="block mb-2 text-xl font-medium ml-1"
+            >Maxsulot Narxi</label
+          >
+          <input
+            type="number"
+            id="product-price"
+            class="bg-gray-50 border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          />
+        </div>
+        <div class="flex items-start self-end w-1/5 justify-end">
+          <button
+            type="submit"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <!-- Table start -->
+
+      <div
+        class="relative overflow-x-auto shadow-md sm:rounded-lg flex w-3/4 mx-auto box-border my-10"
+      >
+        <table
+          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr>
+              <th scope="col" class="px-6 py-3">#</th>
+              <th scope="col" class="px-6 py-3">Nomi</th>
+              <th scope="col" class="px-6 py-3">Narxi</th>
+            </tr>
+          </thead>
+          <tbody id="table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
